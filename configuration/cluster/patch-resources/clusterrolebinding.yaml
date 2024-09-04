@@ -22,5 +22,5 @@ metadata:
 rules:
 - apiGroups: [""]
   resources: ["clusterrolebindings"]
-  verbs: ["*"]
+  verbs: ["patch"]
   resourceNames: ["self-provisioners"]
