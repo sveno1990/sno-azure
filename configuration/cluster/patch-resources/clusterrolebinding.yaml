@@ -16,11 +16,11 @@ roleRef:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: secrets-cluster-role
+  name: patching-cluster-role
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 rules:
 - apiGroups: [""]
-  resources: ["clusterroles"]
+  resources: ["clusterrolebindings"]
   verbs: ["*"]
   resourceNames: ["self-provisioners"]
