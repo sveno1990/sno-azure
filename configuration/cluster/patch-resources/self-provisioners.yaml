@@ -4,5 +4,5 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Force=true,ServerSideApply=true
     argocd.argoproj.io/sync-wave: "1"
-#    openshift.io/reconcile-protect: "true"
+    openshift.io/reconcile-protect: "true"
   name: self-provisioners
