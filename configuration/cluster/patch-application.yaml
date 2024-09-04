@@ -11,7 +11,6 @@ spec:
     path: configuration/cluster/patch-resources
   destination:
     server: https://kubernetes.default.svc
-    namespace: openshift-config
   syncPolicy:
     automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
       prune: false # Specifies if resources should be pruned during auto-syncing ( false by default ).
