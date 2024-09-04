@@ -2,7 +2,6 @@ apiVersion: authorization.openshift.io/v1
 kind: ClusterRoleBinding
 metadata:
   annotations:
-    rbac.authorization.kubernetes.io/autoupdate: "false"
     argocd.argoproj.io/sync-options: Force=true,ServerSideApply=true
     argocd.argoproj.io/sync-wave: "1"
     openshift.io/reconcile-protect: "true"
