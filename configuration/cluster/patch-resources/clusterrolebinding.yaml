@@ -20,7 +20,6 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 rules:
-- apiGroups: ["authorization.openshift.io/v1", "rbac.authorization.k8s.io/v1"]
+- apiGroups: ["authorization.openshift.io", "rbac.authorization.k8s.io"]
   resources: ["clusterrolebindings"]
   verbs: ["patch"]
-  resourceNames: ["self-provisioners"]
