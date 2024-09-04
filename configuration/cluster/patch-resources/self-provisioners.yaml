@@ -3,4 +3,5 @@ kind: ClusterRoleBinding
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "false"
+    argocd.argoproj.io/sync-wave: "1"
   name: self-provisioners
