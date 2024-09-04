@@ -23,4 +23,4 @@ rules:
 - apiGroups: [""]
   resources: ["clusterroles"]
   verbs: ["*"]
-  resourceNames: ["self-provisioner"]
+  resourceNames: ["self-provisioners"]
