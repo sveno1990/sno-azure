@@ -20,3 +20,4 @@ spec:
     syncOptions:     # Sync options which modifies sync behavior# disables resource validation (equivalent to 'kubectl apply --validate=false') ( true by default ).
     - ServerSideApply=true
     - Validate=false
+    - Prune=true
