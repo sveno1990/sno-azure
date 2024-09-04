@@ -1,0 +1,38 @@
+additionalTrustBundlePolicy: Proxyonly
+apiVersion: v1
+baseDomain: <insert base domain>
+compute:
+- name: worker
+  replicas: 0
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  platform: {}
+  replicas: 1
+metadata:
+  creationTimestamp: null
+  name: sno
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 10.2.1.0/24
+  networkType: OVNKubernetes
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  azure:
+    baseDomainResourceGroupName: <insert resource group>
+    cloudName: AzurePublicCloud
+    outboundType: Loadbalancer
+    region: westeurope
+    virtualNetwork: <virtual network name>
+    controlPlaneSubnet: controlPlane
+    resourceGroupName: <insert resource group>
+    networkResourceGroupName: <insert network resource group>
+    computeSubnet: controlPlane
+publish: Internal
+sshKey: <insert ssh key>
+pullSecret: <insert pull secret>
