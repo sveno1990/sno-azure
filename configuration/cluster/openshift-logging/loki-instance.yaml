@@ -1,0 +1,20 @@
+apiVersion: loki.grafana.com/v1
+kind: LokiStack
+metadata:
+  name: logging-loki 
+  namespace: openshift-logging 
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  size: 1x.extra-small
+  storage:
+    schemas:
+    - version: v12
+      effectiveDate: "2022-06-01"
+    secret:
+      name: lokistack-dev-azure
+      type: azure 
+      credentialMode: static
+  storageClassName: managed-csi
+  tenants:
+    mode: openshift-logging 
