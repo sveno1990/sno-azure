@@ -12,3 +12,6 @@ metadata:
     - effect: NoExecute
       key: infra
       value: reserved
+    rbac:
+      policy: 'g, rbacsystem:cluster-admins, role:admin'
+      scopes: '[groups]'
