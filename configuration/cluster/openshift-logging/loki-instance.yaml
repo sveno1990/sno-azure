@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec:
-  size: 1x.extra-small
+  size: 1x.demo
   storage:
     schemas:
     - effectiveDate: "2024-04-02"
