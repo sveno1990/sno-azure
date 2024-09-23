@@ -52,3 +52,5 @@ spec:
     ocpConsole:
       logsLimit: 15
   managementState: Managed 
+  rules:
+    enabled: true 
