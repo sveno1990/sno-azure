@@ -4,7 +4,7 @@ metadata:
   name: logging-loki 
   namespace: openshift-logging 
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   size: 1x.demo
   storage:
@@ -17,4 +17,30 @@ spec:
       credentialMode: static
   storageClassName: managed-csi
   tenants:
-    mode: openshift-logging 
+    mode: openshift-logging
+---
+apiVersion: logging.openshift.io/v1
+kind: ClusterLogging
+metadata:
+  name: instance 
+  namespace: openshift-logging
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  collection:
+    type: vector
+  logStore:
+    lokistack:
+      name: logging-loki
+    retentionPolicy:
+      application:
+        maxAge: 7d
+      audit:
+        maxAge: 7d
+      infra:
+        maxAge: 7d
+    type: lokistack
+  visualization:
+    ocpConsole:
+      logsLimit: 15
+  managementState: Managed 
