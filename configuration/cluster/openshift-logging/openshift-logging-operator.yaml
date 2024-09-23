@@ -27,8 +27,7 @@ metadata:
   namespace: openshift-logging 
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-spec:
-  targetNamespaces: {}
+spec: {}
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -38,7 +37,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1" 
 spec:
-  channel: stable 
-  name: openshift-logging
-  source: redhat-operators 
+  channel: stable-5.9
+  installPlanApproval: Automatic
+  name: cluster-logging
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
