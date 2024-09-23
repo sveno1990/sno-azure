@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/sveno1990/sno-azure
     targetRevision: HEAD
-    path: configuration/cluster
+    path: configuration/applications
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-config
