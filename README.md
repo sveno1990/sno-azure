@@ -9,7 +9,7 @@
 - Login in the VM and do the following:
   - `sudo dnf install wget tar git -y `
   - `wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.16.9/openshift-install-linux.tar.gz`
-  - `tar -xvf  https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.16.9/openshift-install-linux.tar.gz`
+  - `tar -xvf openshift-install-linux.tar.gz`
   - `mkdir install`
   - `curl -o install/install-config.yaml https://raw.githubusercontent.com/sveno1990/sno-azure/refs/heads/main/bootstrap/1-install-config.yaml`
   - edit the install/install-config.yaml
