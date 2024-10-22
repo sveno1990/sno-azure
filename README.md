@@ -14,3 +14,4 @@
   - `curl -o install/install-config.yaml https://raw.githubusercontent.com/sveno1990/sno-azure/refs/heads/main/bootstrap/1-install-config.yaml`
   - edit the install/install-config.yaml
   - Run the openshift installer `./openshift-install create cluster --dir ./install/`
+  - You will be prompted for the properties of your Service Principal
