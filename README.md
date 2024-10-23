@@ -29,6 +29,6 @@
   ServerAliveInterval 60
   ServerAliveInterval 60
   ```
-- Now use your favourite browser proxy configuration to direct the xforce.local domain to the sock proxy. For example foxy proxy:
+- Now use your favourite browser proxy configuration to direct the xforce.local domain to the socks proxy. For example foxy proxy:
 ![image](https://github.com/user-attachments/assets/64f8c8bb-66c0-47f4-95fa-ca545067d98f)
 
