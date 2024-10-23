@@ -1,7 +1,8 @@
 ## Steps:
 
 - Create Service Principal
-- Create Virtual Machine (to be used as bastion) with eurolinux or RHEL (little bit more expensive) as a spot instance
+- Create Virtual Machine (to be used as bastion) with eurolinux or RHEL (little bit more expensive) as a spot instance.
+  SKU: `Standard_D4s_v3`
 - Assign the Service Principal the Owner role on the resource group (of the vm)
 - Create a second resource group
 - Assign the Service Principal the contributor role on the second resource group (of the vm)
