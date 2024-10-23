@@ -16,3 +16,19 @@
   - edit the `install/install-config.yaml`
   - Run the openshift installer `./openshift-install create cluster --dir ./install/`
   - You will be prompted for the properties of your Service Principal
+  - You can follow the installation in the `~/install/.openshift_install.log`
+  - When the installation is done you can find the kubeadmin config and password in `~/install/auth/`
+- To use the OpenShift Console from your workstation you need to add the following ssh config
+  ```
+  Host oc-local
+  Hostname <insert public ip of bastion>
+  User azureuser
+  pubkeyauthentication yes
+  IdentityFile ~/.ssh/id_rsa
+  DynamicForward 9998
+  ServerAliveInterval 60
+  ServerAliveInterval 60
+  ```
+- Now use your favourite browser proxy configuration to direct the xforce.local domain to the sock proxy. For example foxy proxy:
+![image](https://github.com/user-attachments/assets/64f8c8bb-66c0-47f4-95fa-ca545067d98f)
+
