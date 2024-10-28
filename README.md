@@ -18,6 +18,7 @@
   - You will be prompted for the properties of your Service Principal
   - You can follow the installation in the `~/install/.openshift_install.log`
   - When the installation is done you can find the kubeadmin config and password in `~/install/auth/`
+  - Download the OC client: `https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz`
 - To use the OpenShift Console from your workstation you need to add the following ssh config
   ```
   Host oc-local
