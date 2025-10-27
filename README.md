@@ -9,7 +9,7 @@
 - create a second subnet in the bastion vm virtual network with the name: `controlPlane`
 - Login in the VM and do the following:
   - `sudo dnf install wget tar git -y `
-  - `wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.16.9/openshift-install-linux.tar.gz`
+  - `wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.20.1/openshift-install-linux-4.20.1.tar.gz`
   - `tar -xvf openshift-install-linux.tar.gz`
   - `mkdir install`
   - `curl -o install/install-config.yaml https://raw.githubusercontent.com/sveno1990/sno-azure/refs/heads/main/bootstrap/1-install-config.yaml`
